@@ -1,30 +1,66 @@
-#   Configuration Text For AI Assistant That Reads & Documents Abusive Messages
+# AI Abusive Message Documentation Tool
 
+## Overview
+
+This repository contains system prompts designed to help individuals process and document emotionally abusive or manipulative messages without having to directly read the potentially triggering content. The tool creates an automated workflow where messages from abusive individuals undergo analysis and are then presented as a structured summary to the user.
+
+## Purpose
+
+Many individuals who receive hurtful and abusive messages from toxic people experience:
+- Anxiety, trauma, and emotional distress when reading these communications
+- A need to document these interactions for therapy, legal purposes, or personal records
+- The risk of self-gaslighting over time, minimizing the severity of the abuse they've experienced
+
+This tool serves as a buffer between the user and the original message, providing an objective record while protecting the user's mental health.
+
+## How It Works
+
+1. The user provides a message (email, text, screenshot, etc.) to an AI assistant configured with this system prompt
+2. The AI analyzes the message without the user having to read it
+3. The AI generates a structured report that includes:
+   - Technical details (sender, timestamp, etc.)
+   - Summary of content
+   - Analysis of manipulative tactics
+   - Optional quotes (with trigger warnings and whitespace)
+   - The original message (separated by whitespace to avoid accidental viewing)
+
+## Implementation
+
+This tool can be implemented using:
+- Any modern AI assistant (OpenAI's GPT models, Claude, etc.)
+- Workflow automation tools like Zapier, Make, or N8n
+- Custom applications with AI API integration
+
+No advanced technical knowledge is required - the system works through simple text prompts that can be copied into any AI interface.
+
+## Versions
+
+This repository contains multiple versions of the system prompt:
+- **Latest**: The most current version with improvements based on user feedback
+- **Version History**: Previous iterations are maintained for reference
+
+## Customization
+
+The system prompt can be customized to meet individual needs:
+- Adjust the level of detail in summaries
+- Modify or remove the inclusion of direct quotes
+- Change the format of the report
+- Add specific instructions for particular types of abuse
+
+## Important Notes
+
+- **Not a Substitute for Professional Help**: This tool is designed as a supplementary aid and is not a replacement for professional mental health support
+- **Privacy Considerations**: Be mindful of where and how you share sensitive messages
+- **Compatibility**: Works with virtually any AI tool that accepts custom instructions
+
+## Usage Example
+
+1. Copy the system prompt from the `latest.md` file
+2. Paste it into your preferred AI assistant's system prompt or instructions
+3. Provide the message you want analyzed
+4. Receive a structured report that protects you from direct exposure to the content
+
+## License
+
+This project is shared openly to help anyone dealing with abusive communications. You are free to use, modify, and share these prompts as needed.
  
-This GitHub repository contains the configuration text for a large language model assistant designed to assist the user to document verbally abusive messages received through digital channels. These might be emails, WhatsApp conversations, or messages received through any other digital channel.
-
-The configuration text was drafted with a very specific and painful use case in mind.:
-
-Many individuals who receive hurtful and abusive messages from toxic people find that reading these communications provokes anxiety, trauma, and upset. Equally, those who receive such messages commonly find that recording them serves a few important and useful purposes. 
-
-For one, having an objective record of the communications received can serve as a tool against the tendency of victims' abuse to engage in self-gaslighting. Those who receive messages like this can over time convince themselves that they weren't as hurtful or bad as they really were. 
-
-Many individuals who have been on the receiving end of messages such as these are also in therapy. Given that we can't have our therapists wearing invisibility cloaks and hiding in the background when we're being abused, recording and summarising the messages received can serve as a “next best thing. “
-
-The configuration text for this assistant was written with exactly these kind of dynamics and situations in mind. Its objective is twofold. Firstly to shield the user from reading the original message. The mechanism it uses to do this is by providing a summary of the communication, and then a trigger warning and finally white space. 
-
-The purpose of the whitespace instruction is to provide room for the user to avoid accidentally seeing the message unless they wish to do so. Finally, the assistant is configured to copy the original message in its entirety for the purpose of documentation. The configuration instructions here were designed to cover the most common use cases, such as the user providing a copy of a text message or a screenshot of a communication exchange on WhatsApp. 
-
-In order to be as portable as possible, the configuration text was written to not assume that the underlying model has vision capability. Given that LLMs with vision are increasingly becoming the norm and will undoubtedly be the standard in the very near future, the user may wish to remove this instruction in order to avoid confusing the model. 
-
-The useful thing about LLM assistants is that they are relatively portable. Whether the configuration is written in natural language like this one or in JSON, they can be easily shifted around between platforms and to a good extent they're also model agnostic. This particular assistant doesn't require anything advanced such as a RAG pipeline or exposure to real-time events. Any model with good reasoning capabilities would be suitable to deploy this on top of. This assistant could be provisioned on OpenAI or on Hugging Face Chat. I have an assistant running for anyone who wishes to use it on the latter platform. 
-
-The configuration text here is shared on an open source basis to allow anyone who wishes to tweak the configuration to better reflect the specific circumstances of their own abuse to freely do so. Some instructions, however, might be generally useful, including the instruction to the model to assume the context of abuse as an underlying dynamic, which can make the direction of the output more deterministic without needing to do things like manually configure temperature settings. 
-
-The configuration is open-ended as to whether the end user is the victim of abuse or someone who is assisting them. The intention here is that someone might be willing to read the original message and verify that the model has correctly copied it for posterity before deleting the original communication. 
-
-
-## Config (V2)
-
-
-
